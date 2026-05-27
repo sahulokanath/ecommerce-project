@@ -1,0 +1,5 @@
+npm init playwright@latest --> To Install playwright
+npm install csv-parse --> csv File Read
+npm install xlsx -->xlsx File Read
+npm install -D allure-playwright --> allure Report Check
+npm install @faker-js/faker --> TO Read Random Data
