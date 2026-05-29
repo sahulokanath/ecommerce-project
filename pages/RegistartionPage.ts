@@ -25,7 +25,7 @@ export class RegistrationPage {
         this.textPassword = page.locator("input[name='password']");
         this.textConfirmPassword = page.locator("input[name='confirm']");
         this.chkPrivacyPolicy = page.locator("input[name='agree']");
-        this.btnContinue = page.locator("button[type='submit']");
+        this.btnContinue = page.locator("//input[@type='submit']");
         this.msgConformation = page.locator("//h1[text()='Your Account Has Been Created!']");
     }
 
@@ -75,6 +75,9 @@ export class RegistrationPage {
         return await this.chkPrivacyPolicy.isChecked();
     }
 
+    async confrommassgege(): Promise<string> {
+        return await this.msgConformation.textContent() ?? '';
+    }
     //Complete the registration process
 
     async completeRegition(userdata: {

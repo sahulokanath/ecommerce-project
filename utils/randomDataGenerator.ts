@@ -3,9 +3,7 @@ import { faker } from '@faker-js/faker';
 export class RandomDataGenerator {
 
     //method to generate random user data
-    static generateRandomUserData() {
-
-    }
+    
 
     static generateRandomFirstName(): string {
         return faker.person.firstName();
@@ -26,8 +24,8 @@ export class RandomDataGenerator {
         return faker.location.city();
     }
 
-    static generateRandomPassword(lenght: number = 8): string {
-        return faker.internet.password();
+    static generateRandomPassword(length: number = 8): string {
+        return faker.internet.password({ length });
     }
 
     static generateRandomAddress(): string {

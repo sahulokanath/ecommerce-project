@@ -1,0 +1,46 @@
+Error clicking Register link: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('a[title=\'Register\']')
+
+    at HomePage.clickRegister (C:\EcommersApplication\pages\HomePage.ts:63:36)
+    at C:\EcommersApplication\tests\AccountRegister.spec.ts:27:20 {
+  Symbol(step): {
+    location: {
+      file: 'C:\\EcommersApplication\\pages\\HomePage.ts',
+      line: 63,
+      column: 36,
+      function: 'HomePage.clickRegister'
+    },
+    category: 'pw:api',
+    title: "Click locator('a[title=\\'Register\\']')",
+    apiName: 'locator.click',
+    params: { selector: "a[title='Register']", strict: true, timeout: 0 },
+    group: undefined,
+    stepId: 'pw:api@35',
+    boxedStack: undefined,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [TestInfoImpl],
+      _stepId: 'pw:api@35',
+      _title: "Click locator('a[title=\\'Register\\']')",
+      _parentStep: undefined,
+      skip: [Function (anonymous)]
+    },
+    complete: [Function: complete],
+    endWallTime: 1779902334542,
+    error: {
+      message: 'Error: locator.click: Test timeout of 30000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('a[title=\\'Register\\']')\x1B[22m\n",
+      stack: 'Error: locator.click: Test timeout of 30000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('a[title=\\'Register\\']')\x1B[22m\n" +
+        '\n' +
+        '    at HomePage.clickRegister (C:\\EcommersApplication\\pages\\HomePage.ts:63:36)\n' +
+        '    at C:\\EcommersApplication\\tests\\AccountRegister.spec.ts:27:20',
+      cause: undefined
+    }
+  }
+}
