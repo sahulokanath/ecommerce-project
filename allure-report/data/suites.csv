@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","9156","Account Registion @master @regression @sanity","chromium","2026-05-30","passed","2026-05-30","","AccountRegister.spec.ts","",""
+"","10681","Account Registion","chromium","2026-05-30","passed","2026-05-30","","AccountRegister.spec.ts","",""

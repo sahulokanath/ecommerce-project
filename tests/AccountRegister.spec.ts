@@ -16,17 +16,30 @@ import { RegistrationPage } from '../pages/RegistartionPage';
 import { TestConfig } from '../test.config';
 import { RandomDataGenerator } from '../utils/randomDataGenerator';
 
-test('Account  Registion', async ({ page }) => {
+let homePage: HomePage;
+let registrationPage: RegistrationPage;
+let testConfig: TestConfig;
 
-    const testConfig = new TestConfig();
-
+test.beforeEach(async ({ page }) => {
+     testConfig = new TestConfig();
     await page.goto(testConfig.appUrl); // navigate to the application URL
 
-    const homePage = new HomePage(page);
+     homePage = new HomePage(page);
     await homePage.clickMyAccount(); // click on my account link
     await homePage.clickRegister();// click on register link
 
-    const registrationPage = new RegistrationPage(page);
+    registrationPage = new RegistrationPage(page);
+});
+
+test.afterEach(async ({ page }) => {
+    await page.close(); // close the browser after each test
+});
+
+test('Account  Registion @master @regression @sanity', async () => {
+
+    await homePage.isHomePageDisplayed(); // validate home page is displayed
+    await homePage.clickMyAccount(); // click on my account link
+    await homePage.clickRegister();// click on register link
 
     await registrationPage.enterFirstName(RandomDataGenerator.generateRandomFirstName());
     await registrationPage.enterLastName(RandomDataGenerator.generateRandomLastName());
@@ -44,5 +57,5 @@ test('Account  Registion', async ({ page }) => {
     const confirmation = await registrationPage.getConformationMsg();
     await expect(confirmation).toContain('Your Account Has Been Created!');
 
-    await page.waitForTimeout(5000); // wait for 5 seconds to see the result
+
 });

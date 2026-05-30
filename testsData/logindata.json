@@ -1,17 +1,14 @@
 [
-    {
-        "testName":"valid login",
-
-        "email":"test@gmail.com",
-        "password":"test@123",
-        "expected":"success"
-    },
-    {
-        "testName":"invalid login with wrong password",
-
-        "email":"abch@gmail.com",
-        "password":"test@1234",
-        "expected":"failure"
-    }
-
-] 
+  {
+    "testName": "valid login",
+    "email": "test4321@gmail.com",
+    "password": "@1234@Test",
+    "expected": "success"
+  },
+  {
+    "testName": "invalid login with wrong password",
+    "email": "cffdfe@gmail.com",
+    "password": "test@12345",
+    "expected": "failure"
+  }
+]
