@@ -1,1 +1,1 @@
-[]
+[{"name":"Jenkins","type":"jenkins","url":"http://localhost:8080/","buildOrder":8,"buildName":"OpenCard-Loacl #8","buildUrl":"http://localhost:8080/job/OpenCard-Loacl/8/display/redirect","reportName":"AllureReport","reportUrl":"http://localhost:8080/job/OpenCard-Loacl/8/allure"}]

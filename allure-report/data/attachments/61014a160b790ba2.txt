@@ -1,0 +1,46 @@
+Error clicking Login link: locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('a[title=\'Login\']')
+
+    at HomePage.clickLogin (C:\EcommersApplication\pages\HomePage.ts:53:33)
+    at C:\EcommersApplication\tests\Login.spec.ts:35:20 {
+  Symbol(step): {
+    location: {
+      file: 'C:\\EcommersApplication\\pages\\HomePage.ts',
+      line: 53,
+      column: 33,
+      function: 'HomePage.clickLogin'
+    },
+    category: 'pw:api',
+    title: "Click locator('a[title=\\'Login\\']')",
+    apiName: 'locator.click',
+    params: { selector: "a[title='Login']", strict: true, timeout: 0 },
+    group: undefined,
+    stepId: 'pw:api@36',
+    boxedStack: undefined,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [TestInfoImpl],
+      _stepId: 'pw:api@36',
+      _title: "Click locator('a[title=\\'Login\\']')",
+      _parentStep: undefined,
+      skip: [Function (anonymous)]
+    },
+    complete: [Function: complete],
+    endWallTime: 1780113241983,
+    error: {
+      message: 'Error: locator.click: Target page, context or browser has been closed\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('a[title=\\'Login\\']')\x1B[22m\n",
+      stack: 'Error: locator.click: Target page, context or browser has been closed\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('a[title=\\'Login\\']')\x1B[22m\n" +
+        '\n' +
+        '    at HomePage.clickLogin (C:\\EcommersApplication\\pages\\HomePage.ts:53:33)\n' +
+        '    at C:\\EcommersApplication\\tests\\Login.spec.ts:35:20',
+      cause: undefined
+    }
+  }
+}
