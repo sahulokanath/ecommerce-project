@@ -27,11 +27,12 @@ test.afterEach(async ({ page }) => {
     await page.close(); // close the browser after each test
 });
 
-test('Logout functionality @master', async () => {
+test('Logout functionality @master @regression', async () => {
 
     //Navigate to login page
     await homePage.clickMyAccount();
     await homePage.clickLogin();
+
     //Enter Valid credentials and login
     await loginPage.login(testConfig.email, testConfig.password);
     //Validate My account page is displayed 

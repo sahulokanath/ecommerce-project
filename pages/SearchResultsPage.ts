@@ -2,6 +2,9 @@ import { Page, Locator } from '@playwright/test';
 import { ProductPage } from './ProductPage'; // Import ProductPage if needed
 
 export class SearchResultsPage {
+    isProductDisplayed(searchTerm: any) {
+        throw new Error('Method not implemented.');
+    }
     private readonly page: Page;
     
     // Locators using CSS selectors
