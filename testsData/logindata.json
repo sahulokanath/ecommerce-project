@@ -7,7 +7,7 @@
   },
   {
     "testName": "invalid login with wrong password",
-    "email": "cffdfe@gmail.com",
+    "email": "fhfhf@gmail.com",
     "password": "test@12345",
     "expected": "failure"
   }
