@@ -2,24 +2,26 @@ import { Page, Locator } from '@playwright/test';
 import { ProductPage } from './ProductPage'; // Import ProductPage if needed
 
 export class SearchResultsPage {
-    isProductDisplayed(searchTerm: any) {
-        throw new Error('Method not implemented.');
-    }
+
     private readonly page: Page;
-    
+
     // Locators using CSS selectors
     private readonly searchPageHeader: Locator;
     private readonly searchProducts: Locator;
 
+
+
     constructor(page: Page) {
         this.page = page;
-        
+
         // Initialize locators with CSS selectors
         this.searchPageHeader = page.locator('#content h1');
         this.searchProducts = page.locator('h4>a');
-        
-    }
 
+    }
+    isProductDisplayed(searchTerm: any) {
+        throw new Error('Method not implemented.');
+    }
     /**
      * Verify if the search results page exists by checking the header text
      * @returns Promise<boolean> - true if the search results page exists
@@ -43,8 +45,8 @@ export class SearchResultsPage {
             const count = await this.searchProducts.count();
             for (let i = 0; i < count; i++) {
                 const product = this.searchProducts.nth(i);
-                 const title = await product.textContent();
-                 if (title === productName) {
+                const title = await product.textContent();
+                if (title === productName) {
                     return true;
                 }
             }
